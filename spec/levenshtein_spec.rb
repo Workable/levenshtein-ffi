@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Levenshtein do
+RSpec.describe Levenshtein do
   fixtures = [
     ["hello", "hello", 0],
     ["hello", "helo", 1],
@@ -15,8 +15,8 @@ describe Levenshtein do
 
   fixtures.each do |w1, w2, d|
     it "should calculate a distance of #{d} between #{w1} and #{w2}" do
-      Levenshtein.distance(w1, w2).should == d
-      Levenshtein.distance(w2, w1).should == d
+      expect(Levenshtein.distance(w1, w2)).to be == d
+      expect(Levenshtein.distance(w2, w1)).to be == d
     end
   end
 
