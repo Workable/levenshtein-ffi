@@ -1,2 +1,2 @@
 require 'mkmf'
-create_makefile('levenshtein')
+create_makefile('levenshtein/levenshtein')

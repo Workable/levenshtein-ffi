@@ -1,1 +1,2 @@
-require File.dirname(__FILE__) + "/../lib/levenshtein"
+$LOAD_PATH.unshift(File.expand_path('../', __dir__))
+require "levenshtein"

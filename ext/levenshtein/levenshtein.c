@@ -21,8 +21,8 @@ unsigned int levenshtein (const char *word1, const char *word2) {
         word1++, word2++, len1--, len2--;
 
     /* handle degenerate cases */
-    if (!len1) return len2;
-    if (!len2) return len1;
+    if (!len1) return (unsigned int)len2;
+    if (!len2) return (unsigned int)len1;
     
     /* initialize the column vector */
     for (j = 0; j < len2 + 1; j++)
